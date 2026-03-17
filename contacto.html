@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TramiIA RD - Contacto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="imagenes/TramiIA RD.jpg" alt="Logo TramiIA RD" width="150">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios IA</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Contáctanos</h1>
+                <p>¿Tienes dudas, sugerencias o quieres reportar un error en la información? Escríbenos.</p>
+            </div>
+        </section>
+
+        <section class="contacto-grid">
+            <div class="container grid-2">
+                <!-- Formulario de Contacto -->
+                <div class="formulario-contacto">
+                    <h2>Envíanos un mensaje</h2>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
+                        </div>
+                        <div class="campo">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="correo" placeholder="ana@ejemplo.com" required>
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué trámite necesitas ayuda?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Otros medios de contacto y Mapa -->
+                <div class="info-contacto-mapa">
+                    <h2>Otras vías</h2>
+                    <p><strong>WhatsApp:</strong> +1 (809) 555-1234 (Solo emergencias informativas)</p>
+                    <p><strong>Email:</strong> hola@tramiia-rd.com</p>
+                    <div class="mapa-placeholder">
+                        <h3>Nuestra ubicación (Oficina Principal)</h3>
+                        <!-- Simulación de un Google Map incrustado. En un caso real, pegarías el iframe de Google Maps -->
+                        <div class="mapa-falso">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30262.55043259054!2d-69.942085!3d18.480187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89f5b1b1b1b1%3A0x8eaf89f5b1b1b1b1!2sSanto%20Domingo!5e0!3m2!1ses!2sdo!4v1678900000000!5m2!1ses!2sdo" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="nota-mapa"><em>(Esto es un mapa de ejemplo de Santo Domingo)</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2024 TramiIA RD - Haciendo los trámites más simples para los dominicanos.</p>
+        </div>
+    </footer>
+</body>
+</html>
