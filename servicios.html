@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TramiIA RD - Servicios IA</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="imagenes/TramiIA RD.jpg" alt="Logo TramiIA RD" width="150">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" class="active">Servicios IA</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>¿En qué trámite podemos ayudarte hoy?</h1>
+                <p>Haz clic en cualquier tarjeta para ver un ejemplo de la ayuda de nuestra IA.</p>
+            </div>
+        </section>
+
+        <!-- Grid de 8 Tarjetas (Servicios/Productos) -->
+        <section class="servicios-grid-section">
+            <div class="container">
+                <div class="tarjetas-grid">
+                    <!-- Tarjeta 1: Pasaporte -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('pasaporte')">
+                        <h3>Pasaporte por primera vez</h3>
+                        <p>Documentos, costo y pasos para solicitarlo.</p>
+                        <span class="badge">Nuevo</span>
+                    </div>
+                    <!-- Tarjeta 2: Cédula -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('cedula')">
+                        <h3>Renovación de Cédula</h3>
+                        <p>Si está vencida, perdida o por cambio de datos.</p>
+                    </div>
+                    <!-- Tarjeta 3: Acta de Nacimiento -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('acta')">
+                        <h3>Acta de Nacimiento</h3>
+                        <p>Cómo obtener una copia oficial en línea o presencial.</p>
+                    </div>
+                    <!-- Tarjeta 4: Licencia de Conducir -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('licencia')">
+                        <h3>Licencia de Conducir</h3>
+                        <p>Requisitos para nueva, renovación o reposición.</p>
+                    </div>
+                    <!-- Tarjeta 5: Becas Estudiantiles -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('becas')">
+                        <h3>Becas (MESCyT)</h3>
+                        <p>Convocatorias, requisitos y formularios.</p>
+                    </div>
+                    <!-- Tarjeta 6: Impuestos Internos (DGII) -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('impuestos')">
+                        <h3>Declaración de Impuestos</h3>
+                        <p>Guía para RNC, ITBIS y plazos.</p>
+                    </div>
+                    <!-- Tarjeta 7: Certificaciones de buena conducta -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('certificado')">
+                        <h3>Certificado de No Antecedentes</h3>
+                        <p>Proceso para la Procuraduría.</p>
+                    </div>
+                    <!-- Tarjeta 8: Solicitudes generales -->
+                    <div class="tarjeta" onclick="mostrarEjemploIA('solicitud')">
+                        <h3>Otros Trámites Públicos</h3>
+                        <p>Agua, luz, ayuntamientos. Pregúntale a la IA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulación de Respuesta de la IA -->
+        <section class="ia-demo">
+            <div class="container ia-demo-container">
+                <h2>Simulador de Asistente IA</h2>
+                <div class="chat-simulado">
+                    <div class="mensaje usuario">
+                        <p><strong>Tú:</strong> Quiero sacar mi pasaporte por primera vez.</p>
+                    </div>
+                    <div class="mensaje ia" id="respuesta-ia">
+                        <p><strong>TramiIA:</strong> <span id="ia-texto">Selecciona una tarjeta de la lista para ver un ejemplo.</span></p>
+                    </div>
+                </div>
+                <p class="nota">* Esto es una simulación. La IA real procesaría tu pregunta de forma más compleja.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2024 TramiIA RD - Haciendo los trámites más simples para los dominicanos.</p>
+        </div>
+    </footer>
+
+    <!-- Pequeño script para la simulación -->
+    <script>
+        function mostrarEjemploIA(servicio) {
+            const iaTextElement = document.getElementById('ia-texto');
+            let mensaje = "";
+
+            switch(servicio) {
+                case 'pasaporte':
+                    mensaje = "Para tu **Pasaporte por primera vez**:\n1. Requisitos: Acta de nacimiento original, cédula vigente, y solicitud completada.\n2. Costo: Aprox. RD$ 2,500.\n3. Pasos: Ir a la DGP, tomar foto y pagar.\n4. Oficina: Sede Central en la Av. México.\n5. Error común: Llevar acta con más de 60 días de emitida.";
+                    break;
+                case 'cedula':
+                    mensaje = "Para **Renovar tu Cédula**:\n- Requisitos: Acta de nacimiento (si es cambio) y cédula anterior.\n- Costo: RD$ 500 - RD$ 800.\n- Dónde: En cualquier oficina de la JCE.\n- Horarios: 8:00 AM - 4:00 PM.";
+                    break;
+                case 'acta':
+                    mensaje = "Para una **Copia de Acta de Nacimiento**:\n- Puedes hacerlo online en la web de la JCE.\n- Costo: RD$ 300.\n- Necesitas tu cédula y correo electrónico.\n- En persona: Oficialías del Estado Civil.";
+                    break;
+                case 'licencia':
+                    mensaje = "Para **Nueva Licencia de Conducir**:\n1. Requisitos: Cédula, certificado médico (INTRANT), haber pagado el curso.\n2. Costo: RD$ 2,000.\n3. Pasos: Solicitar cita en línea e ir a un centro del INTRANT.";
+                    break;
+                default:
+                    mensaje = "Claro, podemos ayudarte con ese trámite. Por favor, sé más específico para darte la información detallada.";
+            }
+            iaTextElement.innerText = mensaje;
+            // Pequeña animación extra para la respuesta
+            document.getElementById('respuesta-ia').style.animation = 'none';
+            setTimeout(() => {
+                document.getElementById('respuesta-ia').style.animation = 'fadeInUp 0.5s ease-out';
+            }, 10);
+        }
+    </script>
+</body>
+</html>
